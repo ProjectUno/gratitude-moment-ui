@@ -13,7 +13,7 @@ class ViewAll extends Component {
 
     return (
         <div className="viewAllFooter">
-          <btn className="viewAllButton">VIEW ALL<>
+          <btn className="viewAllButton">VIEW ALL</btn>
         </div>
     );
   }

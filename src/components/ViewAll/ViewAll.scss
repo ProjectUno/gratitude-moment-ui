@@ -1,9 +1,14 @@
 .viewAllFooter{
   background-color: #FCFCFC;
+  padding: 40px;
+  border: solid 2px #EBEBEB;
   .viewAllButton{
     background-color: #ED2C7B;
     font-size: 18px;
     color: #FFFFFF;
     letter-spacing: 3px;
+    border-radius: 3px;
+    padding: 15px 70px;
+    cursor: pointer;
   }
 }

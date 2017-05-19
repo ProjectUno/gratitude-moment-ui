@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header'
 import SubHeader from '../../components/SubHeader'
 import JournalEntry from '../../components/JournalEntry'
-import ViewAll from '../../components/JournalEntry'
+import ViewAll from '../../components/ViewAll'
 import helpers from '../../services/moments.js'
 
 import './Home.scss';
