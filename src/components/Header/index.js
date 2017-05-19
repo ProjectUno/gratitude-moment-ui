@@ -11,16 +11,13 @@ class Header extends Component {
 
   }
 
-
-
   render() {
-
 
     return (
         <div className="header">
-          <img src={g} alt='Logito' />
+          <img className="g" src={g} alt='Logito' />
           <div className="title">I'm Grateful For</div>
-          <img src={settings} alt='Settings' />
+          <img className="settings" src={settings} alt='Settings' />
         </div>
     );
   }

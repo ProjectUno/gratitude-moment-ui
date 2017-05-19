@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import Header from '../../components/Header'
 import SubHeader from '../../components/SubHeader'
 import JournalEntry from '../../components/JournalEntry'
+import ViewAll from '../../components/ViewAll'
 import helpers from '../../services/moments.js'
 
 import './Home.scss';
 
 class Home extends Component {
 
-constructor(props) {
-  super(props)
+  constructor(props) {
+    super(props)
 
-  this.state= {
-    moments : []
+    this.state= {
+      moments : []
+    }
   }
-}
   componentDidMount() {
     let moments = helpers.getMoments().then(() => {
       this.setState({
@@ -22,6 +23,7 @@ constructor(props) {
       })    
     })
   }
+
   createMoments() {
     let moments = this.state.moments
     console.log(moments)
@@ -34,7 +36,7 @@ constructor(props) {
       </div>
     )
 
-    return contents
+  return contents
   }
   render() {
 
@@ -44,6 +46,7 @@ constructor(props) {
         <Header />
         <SubHeader />
         {moments}
+        <ViewAll />
       </div>
     );
   }
