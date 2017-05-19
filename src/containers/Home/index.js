@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header'
 import SubHeader from '../../components/SubHeader'
 import JournalEntry from '../../components/JournalEntry'
+import ViewAll from '../../components/JournalEntry'
 import helpers from '../../services/moments.js'
 
 import './Home.scss';
@@ -13,7 +14,7 @@ class Home extends Component {
     let moments = helpers.getMoments()
     this.setState({
       moments : moments
-    })    
+    })
   }
   createMoments() {
 
@@ -36,6 +37,7 @@ class Home extends Component {
         <Header />
         <SubHeader />
         {moments}
+        <ViewAll />
       </div>
     );
   }

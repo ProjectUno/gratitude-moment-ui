@@ -2,10 +2,16 @@
     width: 100%;
     background: white;
     height: 47px;
+    display: flex;
+    .g {
+    }
     .title {
-        color: black;
+        color: #606060;
         font-size: 2rem;
         text-align: center;
-        font-family: "ingra"
+        font-family: "ingra";
+        letter-spacing: 2.33px;
+    }
+    .settings{
     }
 }

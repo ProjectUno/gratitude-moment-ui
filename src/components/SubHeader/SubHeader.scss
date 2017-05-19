@@ -2,10 +2,12 @@
     width: 100%;
     background: #FA7D62;
     height: 47px;
+    display: flex;
     .subtitle {
         margin-left: 17px;
-        color: white;
-        font-size: 2rem;
-        font-family: "ingra"
+        font-family: "ingra";
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 1px;
     }
 }
