@@ -14,7 +14,7 @@ class App extends Component {
     this.handleRouteChange = this.handleRouteChange.bind(this);
   }
 
-  scrollToTop() { 
+  scrollToTop() {
     window.scrollTo(0, 0)
   }
 
@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   render() {
-    
+
     return (
       <HttpsRedirect>
         <Router onUpdate={this.handleRouteChange}>
