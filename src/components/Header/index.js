@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import g from '../../assets/g.svg'
+import settings from '../../assets/Settings.svg'
 
 import './Header.scss';
 
@@ -13,10 +15,12 @@ class Header extends Component {
 
   render() {
 
-    
+
     return (
         <div className="header">
-          <div className="title">I'm grateful for...</div>
+          <img src={g} alt='Logito' />
+          <div className="title">I'm Grateful For</div>
+          <img src={settings} alt='Settings' />
         </div>
     );
   }
