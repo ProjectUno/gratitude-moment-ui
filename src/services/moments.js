@@ -6,13 +6,16 @@ var helpers = {
         method: 'get',
         url: 'http://gratitude-moment.herokuapp.com/moments',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization' : 'Token token=wlyEUvgTW4lZMH5u5b1OHAtt',
+            'Accept' : "*/*"
         }
     })
     .then(response => {
+        console.log(response.data)
         return response.data
     })
-        .catch(error =>{
+    .catch(error =>{
       return { status: error }
     }) 
   }

@@ -7,16 +7,33 @@ import './Home.scss';
 
 class Home extends Component {
 
-  getMoments() {
+
+  componentDidMount() {
     let moments = helpers.getMoments()
-    console.log(moments)
+    this.setState({
+      moments : moments
+    })    
+  }
+  createMoments() {
+
+    let contents = (
+      <div>
+        <JournalEntry />
+        <JournalEntry />
+        <JournalEntry />
+        <JournalEntry />
+      </div>
+    )
+
+    return contents
   }
   render() {
-    this.getMoments()
+
+    let moments = this.createMoments()
     return (
       <div className="home-container">
         <Header />
-        <JournalEntry/>
+        {moments}
       </div>
     );
   }
