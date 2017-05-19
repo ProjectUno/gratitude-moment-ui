@@ -15,6 +15,7 @@ class JournalEntry extends Component {
           <div className="row-2">
             <p>{body}</p>
           </div>
+          <hr/>
         </div>
     );
   }

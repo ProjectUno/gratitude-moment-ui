@@ -3,7 +3,10 @@
     background: white;
     height: 47px;
     display: flex;
+    padding: 5px;
+    justify-content: space-around;
     .g {
+      cursor: pointer;
     }
     .title {
         color: #606060;
@@ -13,5 +16,10 @@
         letter-spacing: 2.33px;
     }
     .settings{
+      cursor: pointer;
     }
 }
+
+/* Rectangle 4: */
+background-image: linear-gradient(-180deg, #FFFFFF 73%, #F3F3F3 100%);
+box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);

@@ -20,7 +20,7 @@ class Home extends Component {
     let moments = helpers.getMoments().then(() => {
       this.setState({
         moments : moments
-      })    
+      })
     })
   }
 
@@ -29,6 +29,7 @@ class Home extends Component {
     console.log(moments)
     let contents = (
       <div>
+        <JournalEntry />
         <JournalEntry />
         <JournalEntry />
         <JournalEntry />
