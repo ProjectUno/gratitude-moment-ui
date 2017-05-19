@@ -17,17 +17,17 @@ class Home extends Component {
     }
   }
   componentWillMount() {
-    let moments = helpers.getMoments().then((moment) => {
+    helpers.getMoments().then((moment) => {
       this.setState({
         moments : moment
-      })
+    })
     })
   }
 
   createMoments() {
     let moments = this.state.moments
 
-    let momentsList = moments.map(moment => {
+    let momentsList = moments.reverse().map(moment => {
       let id = moment.id
       let date = new Date(moment.created_at)
       let meridiem = 'am'
