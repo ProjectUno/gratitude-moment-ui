@@ -8,15 +8,23 @@ import './Home.scss';
 
 class Home extends Component {
 
+constructor(props) {
+  super(props)
 
+  this.state= {
+    moments : []
+  }
+}
   componentDidMount() {
-    let moments = helpers.getMoments()
-    this.setState({
-      moments : moments
-    })    
+    let moments = helpers.getMoments().then(() => {
+      this.setState({
+        moments : moments
+      })    
+    })
   }
   createMoments() {
-
+    let moments = this.state.moments
+    console.log(moments)
     let contents = (
       <div>
         <JournalEntry />
