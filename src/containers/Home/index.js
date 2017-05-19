@@ -16,27 +16,47 @@ class Home extends Component {
       moments : []
     }
   }
-  componentDidMount() {
-    let moments = helpers.getMoments().then(() => {
+  componentWillMount() {
+    let moments = helpers.getMoments().then((moment) => {
       this.setState({
-        moments : moments
+        moments : moment
       })    
     })
   }
 
   createMoments() {
     let moments = this.state.moments
-    console.log(moments)
-    let contents = (
-      <div>
-        <JournalEntry />
-        <JournalEntry />
-        <JournalEntry />
-        <JournalEntry />
-      </div>
-    )
+    console.log('moments',moments)
 
-  return contents
+    let momentsList = moments.map(moment => {
+      let id = moment.id
+      let date = new Date(moment.created_at)
+      let meridiem = 'am'
+      let hour = date.getHours()
+      let minutes = date.getMinutes()
+
+      if (hour >= 12) {
+        meridiem = 'pm'
+        if (hour !== 12) {
+          hour -= 12 
+        }
+      } else if (hour === 0) {
+        hour += 12
+      }
+
+      if (minutes < 10) {
+        minutes = '0' + minutes
+      }
+
+      let dateString = date.getMonth() + '/' + date.getDate() + '/' + date.getFullYear() + ' - ' + hour + ":" + minutes + meridiem
+      return (
+        <div key={id} >
+          <JournalEntry date={dateString} body={moment.body}/>
+        </div>
+      )
+    })
+    return momentsList
+    
   }
   render() {
 

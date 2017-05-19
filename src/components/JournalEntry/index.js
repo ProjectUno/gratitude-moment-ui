@@ -6,14 +6,15 @@ class JournalEntry extends Component {
 
 
   render() {
-    let body = "I am grateful for my family and having graduated school so I don't ever have to go back."
+    let { date, body } = this.props
+
     return (
         <div className="entry-container">
           <div className="row-1">
-            <p>Date: <span>May 12, 2017</span></p>
+            <span>{date}</span>
           </div>
           <div className="row-2">
-            <p>{body}</p>
+            <div>{body}</div>
           </div>
         </div>
     );
